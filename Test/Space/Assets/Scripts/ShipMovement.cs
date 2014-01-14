@@ -3,10 +3,10 @@ using System.Collections;
 
 public class ShipMovement : MonoBehaviour
 {
-	public float shipVelocity = 0.1f;
+	public float shipVelocity = 1.0f;
 	
 	float yRotation;
-	float xRotation = 90;
+	float xRotation;
 	
 	// Use this for initialization
 	void Start ()
@@ -24,16 +24,28 @@ public class ShipMovement : MonoBehaviour
 		transform.rotation = Quaternion.Euler (xRotation, yRotation, 0);
 		
 		// Movement
-		if (Input.GetAxis ("Vertical") > 0)
-			transform.Translate(0, shipVelocity, 0 * Time.deltaTime);
+		if (Input.GetAxis ("Vertical") > 0) 
+		{
+			transform.position += transform.forward * shipVelocity * Time.deltaTime;
+			//transform.Translate(0, shipVelocity, 0 * Time.deltaTime);
+		}
 		
-		if (Input.GetAxis ("Vertical") < 0)
-			transform.Translate(0, -shipVelocity, 0 * Time.deltaTime);
+		if (Input.GetAxis ("Vertical") < 0) 
+		{
+			transform.position -= transform.forward * shipVelocity * Time.deltaTime;
+			//transform.Translate(0, -shipVelocity, 0 * Time.deltaTime);
+		}
 		
-		if (Input.GetAxis ("Horizontal") < 0)
-			transform.Translate (-shipVelocity, 0, 0 * Time.deltaTime);
+		if (Input.GetAxis ("Horizontal") < 0) 
+		{
+			transform.Translate (-shipVelocity * Time.deltaTime, 0, 0);
+			//transform.Translate (-shipVelocity, 0, 0 * Time.deltaTime);
+		}
 		
-		if (Input.GetAxis ("Horizontal") > 0)
-			transform.Translate (shipVelocity, 0, 0 * Time.deltaTime);
+		if (Input.GetAxis ("Horizontal") > 0) 
+		{
+			transform.Translate (shipVelocity * Time.deltaTime, 0, 0);
+			//transform.Translate (shipVelocity, 0, 0 * Time.deltaTime);
+		}
 	}
 }

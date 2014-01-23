@@ -35,5 +35,11 @@ public class ShipMovement : MonoBehaviour
 		
 		if (Input.GetAxis ("Horizontal") > 0)
 			transform.Translate (shipVelocity, 0, 0 * Time.deltaTime);
+
+		if (Input.GetAxis ("Jump") > 0)
+			transform.Translate (0, 0, -shipVelocity);
+
+		if (Input.GetAxis ("Crouch") > 0)
+			transform.Translate (0, 0, shipVelocity);
 	}
 }

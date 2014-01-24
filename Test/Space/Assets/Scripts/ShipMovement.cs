@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShipMovement : MonoBehaviour
 {
-	public float shipVelocity = 1.0f;
+	public float shipVelocity = 5.0f;
 	
 	float yRotation;
 	float xRotation;

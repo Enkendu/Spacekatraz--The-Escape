@@ -3,10 +3,10 @@ using System.Collections;
 
 public class ShipMovement : MonoBehaviour
 {
-	public float shipVelocity = 0.1f;
+	public int shipVelocity = 1;
 	
 	float yRotation;
-	float xRotation = 90;
+	float xRotation;
 	
 	// Use this for initialization
 	void Start ()
@@ -25,21 +25,21 @@ public class ShipMovement : MonoBehaviour
 		
 		// Movement
 		if (Input.GetAxis ("Vertical") > 0)
-			transform.Translate(0, shipVelocity, 0 * Time.deltaTime);
+			transform.Translate(0, 0, shipVelocity);
 		
 		if (Input.GetAxis ("Vertical") < 0)
-			transform.Translate(0, -shipVelocity, 0 * Time.deltaTime);
+			transform.Translate(0, 0, -shipVelocity);
 		
 		if (Input.GetAxis ("Horizontal") < 0)
-			transform.Translate (-shipVelocity, 0, 0 * Time.deltaTime);
+			transform.Translate (-shipVelocity, 0, 0);
 		
 		if (Input.GetAxis ("Horizontal") > 0)
-			transform.Translate (shipVelocity, 0, 0 * Time.deltaTime);
+			transform.Translate (shipVelocity, 0, 0);
 
 		if (Input.GetAxis ("Jump") > 0)
-			transform.Translate (0, 0, -shipVelocity);
+			transform.Translate (0, shipVelocity, 0);
 
 		if (Input.GetAxis ("Crouch") > 0)
-			transform.Translate (0, 0, shipVelocity);
+			transform.Translate (0, -shipVelocity, 0);
 	}
 }

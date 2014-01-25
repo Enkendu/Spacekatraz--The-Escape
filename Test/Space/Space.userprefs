@@ -2,7 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipMovement.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\ShipMovement.cs" Line="40" Column="44" />
+=======
+      <File FileName="Assets\Scripts\ShipMovement.cs" Line="6" Column="31" />
+      <File FileName="Assets\Scripts\ShipMovement.cs" Line="51" Column="2" />
+>>>>>>> origin/Nathan
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

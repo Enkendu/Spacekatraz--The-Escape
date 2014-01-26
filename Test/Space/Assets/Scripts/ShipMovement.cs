@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ShipMovement : MonoBehaviour
 {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 	public int shipVelocity = 1;
-=======
-	public float shipVelocity = 5.0f;
->>>>>>> origin/Nathan
+//=======
+	//public float shipVelocity = 5.0f;
+//>>>>>>> origin/Nathan
 	
 	float yRotation;
 	float xRotation;
@@ -28,7 +28,7 @@ public class ShipMovement : MonoBehaviour
 		transform.rotation = Quaternion.Euler (xRotation, yRotation, 0);
 		
 		// Movement
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		if (Input.GetAxis ("Vertical") > 0)
 			transform.Translate(0, 0, shipVelocity);
 		
@@ -46,7 +46,7 @@ public class ShipMovement : MonoBehaviour
 
 		if (Input.GetAxis ("Crouch") > 0)
 			transform.Translate (0, -shipVelocity, 0);
-=======
+//=======
 		if (Input.GetAxis ("Vertical") > 0) 
 		{
 			transform.position += transform.forward * shipVelocity * Time.deltaTime;
@@ -70,6 +70,6 @@ public class ShipMovement : MonoBehaviour
 			transform.Translate (shipVelocity * Time.deltaTime, 0, 0);
 			//transform.Translate (shipVelocity, 0, 0 * Time.deltaTime);
 		}
->>>>>>> origin/Nathan
+//>>>>>>> origin/Nathan
 	}
 }

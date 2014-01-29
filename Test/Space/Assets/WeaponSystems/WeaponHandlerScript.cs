@@ -7,11 +7,13 @@ public class WeaponHandlerScript : MonoBehaviour {
 	public float fireRate = 0.5f;
 	float nextFire;
 	public float speed = 5.0f;
+	Material material;
 	// Use this for initialization
 	void Start () 
 	{
 		//fireRate = 0.5;
 		nextFire = Time.time;
+		material = new Material(Shader.Find("Diffuse"));
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,8 @@ public class WeaponHandlerScript : MonoBehaviour {
 			nextFire = Time.time + fireRate;
 			GameObject clone = (GameObject)Instantiate(projectile , transform.position, transform.rotation);
 			//clone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			material.color = new Color(1,0,0,0);
+			clone.renderer.material = material;
 			clone.rigidbody.velocity = transform.TransformDirection(0,0,speed);
 			Physics.IgnoreCollision(clone.collider, transform.root.collider);
 		}

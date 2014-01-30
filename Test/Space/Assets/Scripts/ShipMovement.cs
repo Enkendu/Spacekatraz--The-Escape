@@ -16,17 +16,19 @@ public class ShipMovement : MonoBehaviour
 	void Start ()
 	{
 		// Lock mouse cursor in game. Press Esc to unlock the cursor
-		Screen.lockCursor = true;
+		//Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		// Mouse look
-		yRotation += Input.GetAxis ("Mouse X");
-		xRotation += Input.GetAxis ("Mouse Y");
-		transform.rotation = Quaternion.Euler (xRotation, yRotation, 0);
-		
+		if(LevelController.startGame == true)
+		{
+			yRotation += Input.GetAxis ("Mouse X");
+			xRotation += Input.GetAxis ("Mouse Y");
+			transform.rotation = Quaternion.Euler (xRotation, yRotation, 0);
+		}
 		// Movement
 //<<<<<<< HEAD
 		if (Input.GetAxis ("Vertical") > 0)

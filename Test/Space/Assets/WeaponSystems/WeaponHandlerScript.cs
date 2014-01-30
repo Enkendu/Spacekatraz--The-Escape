@@ -8,10 +8,10 @@ public class WeaponHandlerScript : MonoBehaviour {
 	float nextFire;
 	public float speed = 5.0f;
 	Material material;
+	public float damage = 10;
 	// Use this for initialization
 	void Start () 
 	{
-		//fireRate = 0.5;
 		nextFire = Time.time;
 		material = new Material(Shader.Find("Diffuse"));
 	}
@@ -19,7 +19,10 @@ public class WeaponHandlerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		fireWeapon();
+		if(LevelController.startGame == true)
+		{
+			fireWeapon();
+		}
 	}
 
 	void fireWeapon () 
@@ -33,6 +36,9 @@ public class WeaponHandlerScript : MonoBehaviour {
 			clone.renderer.material = material;
 			clone.rigidbody.velocity = transform.TransformDirection(0,0,speed);
 			Physics.IgnoreCollision(clone.collider, transform.root.collider);
+			
 		}
 	}
+
+
 }

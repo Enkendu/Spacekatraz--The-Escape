@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LaserProjectileScript : MonoBehaviour {
 
+	//private float damage =
 	// Use this for initialization
 	void Start () {
 	

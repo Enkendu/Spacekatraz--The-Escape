@@ -13,8 +13,10 @@ public class LevelController : MonoBehaviour {
 	public static bool startGame;
 	public static bool didDie;
 	public static bool didWin;
+	public static bool canFire;
 
 	void Start () {
+		canFire = false;
 		startGame = false;
 		didDie = false;
 		didWin = false;
@@ -40,10 +42,11 @@ public class LevelController : MonoBehaviour {
 			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
 			if(GUI.Button (new Rect(375, 400, 150, 100), "Start game"))
 			{
-				print ("you clicked me");
+
 				startGame = true;
+				canFire = true;
 				Time.timeScale = 1.0f;
-				//Screen.showCursor = false;
+
 				Screen.lockCursor = true;
 			}
 		}
@@ -51,13 +54,27 @@ public class LevelController : MonoBehaviour {
 		//death/lose
 		if(didDie == true)
 		{
+			canFire = false;
+			Time.timeScale = 0.0f;
+			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
+			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			{
 
+				Application.LoadLevel("Test_WithMap");
+			}
 		}
 
 		//win
 		if(didWin == true)
 		{
-
+			canFire = false;
+			Time.timeScale = 0.0f;
+			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
+			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			{
+	
+				Application.LoadLevel("Test_WithMap");
+			}
 		}
 	}
 }

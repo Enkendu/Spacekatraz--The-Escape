@@ -17,5 +17,6 @@ public class LaserProjectileScript : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		Destroy (gameObject);
+		print ("I hit" + collision.transform.name);
 	}
 }

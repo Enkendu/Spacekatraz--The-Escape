@@ -19,7 +19,7 @@ public class WeaponHandlerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(LevelController.startGame == true)
+		if(LevelController.canFire == true)
 		{
 			fireWeapon();
 		}

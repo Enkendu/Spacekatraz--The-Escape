@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\MovementTest.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\WinLevel.cs" />
      <Compile Include="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" />

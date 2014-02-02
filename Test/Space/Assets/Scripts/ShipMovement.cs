@@ -15,6 +15,7 @@ public class ShipMovement : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
 		// Lock mouse cursor in game. Press Esc to unlock the cursor
 		//Screen.lockCursor = true;
 	}
@@ -31,6 +32,8 @@ public class ShipMovement : MonoBehaviour
 		}
 		// Movement
 //<<<<<<< HEAD
+
+
 		if (Input.GetAxis ("Vertical") > 0)
 			transform.Translate(0, 0, shipVelocity);
 		
@@ -48,6 +51,8 @@ public class ShipMovement : MonoBehaviour
 
 		if (Input.GetAxis ("Crouch") > 0)
 			transform.Translate (0, -shipVelocity, 0);
+
+
 //=======
 //		if (Input.GetAxis ("Vertical") > 0) 
 //		{

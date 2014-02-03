@@ -8,6 +8,7 @@ public class MovementTest : MonoBehaviour {
 	float turnSpeed = 1.0f;
 	private float trueSpeed = 0.0f;
 	float strafeSpeed = 0.0f;
+	float upDownMovement = 0.0f;
 
 	//mouse look
 	float yRotation;
@@ -54,6 +55,11 @@ public class MovementTest : MonoBehaviour {
 			trueSpeed = 0;
 		}
 
+//		if (Input.GetAxis ("Jump") > 0)
+//			//upDownMovement
+//		
+//		if (Input.GetAxis ("Crouch") > 0)
+			//upDownMovement
 
 		//rigidbody.AddRelativeTorque(pitch*turnSpeed*Time.deltaTime, yaw*turnSpeed*Time.deltaTime, roll*turnSpeed*Time.deltaTime);
 //		rigidbody.AddRelativeForce(0,0,trueSpeed*speed*Time.deltaTime);
@@ -62,7 +68,7 @@ public class MovementTest : MonoBehaviour {
 		//rigidbody.AddRelativeForce(0,0,trueSpeed*speed*Time.deltaTime, ForceMode.Impulse);
 		//rigidbody.AddRelativeForce(strafe);
 
-		rigidbody.AddRelativeForce(Input.GetAxis("Horizontal")*25,0, Input.GetAxis("Vertical")*25);
+		rigidbody.AddRelativeForce(Input.GetAxis("Horizontal")*25, Input.GetAxis("Updown")*25, Input.GetAxis("Vertical")*25);
 
 	}
 }

@@ -1,13 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MovementTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Turret_Cannon.js">
     <Files>
-      <File FileName="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" Line="20" Column="1" />
+      <File FileName="Assets\Scripts\Turret_Cannon.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Turret_projectile.js" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" Line="1" Column="1" />
       <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ShipMovement.cs" Line="12" Column="2" />
+      <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WinLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MovementTest.cs" Line="55" Column="4" />
+      <File FileName="Assets\Scripts\MovementTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Turret_Cannon.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

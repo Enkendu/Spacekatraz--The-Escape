@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ExitDoor.cs">
     <Files>
@@ -6,10 +7,33 @@
       <File FileName="Assets\Scripts\SpaceShipMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" Line="23" Column="1" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Turret_Cannon.js">
+    <Files>
+      <File FileName="Assets\Scripts\Turret_Cannon.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Turret_projectile.js" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" Line="1" Column="1" />
+>>>>>>> 63e2ee1e0081627c32185267bdba08e590bdcba0
       <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WinLevel.cs" Line="1" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Reactor.cs" Line="25" Column="101" />
+=======
+      <File FileName="Assets\Scripts\MovementTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Turret_Cannon.js" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WeaponSystems\WeaponHandlerScript.cs">
+    <Files>
+      <File FileName="Assets\Scripts\MovementTest.cs" Line="36" Column="1" />
+      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="6" Column="30" />
+      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="87" Column="58" />
+>>>>>>> 6d2b0cd711c1c5a336b71185b17443956e9531cb
+>>>>>>> 63e2ee1e0081627c32185267bdba08e590bdcba0
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

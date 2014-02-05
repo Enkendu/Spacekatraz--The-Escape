@@ -60,6 +60,8 @@
      <Compile Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
      <Compile Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
      <Compile Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Scripts\tapcontrol.js" />
+     <Compile Include="Assets\Scripts\Turret_Cannon.js" />
+     <Compile Include="Assets\Scripts\Turret_projectile.js" />
      <None Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\Rain.shader" />
      <None Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />

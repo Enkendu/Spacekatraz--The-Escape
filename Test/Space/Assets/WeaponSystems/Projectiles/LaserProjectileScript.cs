@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LaserProjectileScript : MonoBehaviour {
 
+	//private float damage =
 	// Use this for initialization
 	void Start () {
 	
@@ -11,5 +12,11 @@ public class LaserProjectileScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		Destroy (gameObject);
+		//print ("I hit" + collision.transform.name);
 	}
 }

@@ -46,7 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+     <Compile Include="Assets\Scripts\ExitDoor.cs" />
+=======
+     <Compile Include="Assets\Scripts\EnemyShipAI.cs" />
+>>>>>>> 63e2ee1e0081627c32185267bdba08e590bdcba0
+     <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\Reactor.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
+     <Compile Include="Assets\Scripts\SpaceShipMovement.cs" />
+     <Compile Include="Assets\Scripts\WinLevel.cs" />
      <Compile Include="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" />
      <Compile Include="Assets\WeaponSystems\WeaponHandlerScript.cs" />
      <None Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />

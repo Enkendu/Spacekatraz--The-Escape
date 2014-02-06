@@ -20,14 +20,13 @@ public class EnemyShipAI : MonoBehaviour {
 	public float speed = 5.0f;
 	Material material;
 	public float damage = 10;
-	public bool isFiring = false;
 
 
 
 	// Use this for initialization
 	void Start () 
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("playerShip");
 		nextFire = Time.time;
 		material = new Material(Shader.Find("Diffuse"));
 	}
@@ -45,11 +44,6 @@ public class EnemyShipAI : MonoBehaviour {
 			if(LevelController.canFire)
 			{
 				fireWeapon();
-				isFiring = true;
-			}
-			else
-			{
-				isFiring = false;
 			}
 
 			if(gapDistance > stopDistance)
@@ -84,12 +78,12 @@ public class EnemyShipAI : MonoBehaviour {
 		if (Time.time > fireRate) 
 		{
 			nextFire = Time.time + fireRate;
-			GameObject clone = (GameObject)Instantiate (projectile, transform.position, transform.rotation);
-			//clone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			GameObject newClone = (GameObject)Instantiate(projectile, this.transform.position,this.transform.rotation);
 			material.color = new Color (1, 0, 0, 0);
-			clone.renderer.material = material;
-			clone.rigidbody.velocity = transform.TransformDirection (0, 0, speed);
-			Physics.IgnoreCollision (clone.collider, transform.root.collider);
+			newClone.renderer.material = material;
+			newClone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			Physics.IgnoreCollision (newClone.collider, transform.root.collider);
+
 		}
 	}
 

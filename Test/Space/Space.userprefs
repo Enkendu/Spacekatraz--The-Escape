@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyShipAI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader">
     <Files>
-      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="59" Column="25" />
-      <File FileName="Assets\Scripts\SpaceShipMovement.cs" Line="40" Column="3" />
-      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="14" Column="3" />
+      <File FileName="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpaceShipMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

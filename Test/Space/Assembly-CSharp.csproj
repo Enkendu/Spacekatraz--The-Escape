@@ -71,6 +71,7 @@
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\ScreenRefract.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\RainSplash.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\Fallback.shader" />
+     <None Include="Assets\SF-Pack Mobile\Source\Scripts\MobileBloom.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\Multiply.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\Blend.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\HeightFogBeforeTransparent.shader" />
@@ -80,7 +81,6 @@
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\EnemySelfIlluminationReflective.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\BackgroundAndCharacters\AngryInclude.cginc" />
-     <None Include="Assets\Sounds\Scripts\MobileBloom.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\ParticleMultiply.shader" />
      <None Include="Assets\SF-Pack Mobile\Source\Shaders\Fx\ParticleAdditive.shader" />
      <None Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />

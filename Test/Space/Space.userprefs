@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WeaponSystems\WeaponHandlerScript.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SF-Pack Mobile\Source\Scripts\Fx\MobileBloom.js">
     <Files>
-      <File FileName="Assets\Scripts\SpaceShipMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="46" Column="7" />
+      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="21" Column="20" />
+      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="29" Column="4" />
+      <File FileName="Assets\SF-Pack Mobile\Source\Scripts\Fx\MobileBloom.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent (typeof (AudioClip))]
 public class EnemyShipAI : MonoBehaviour {
 	// Variables used to target the player
 	private GameObject player;
@@ -20,7 +22,8 @@ public class EnemyShipAI : MonoBehaviour {
 	public float speed = 5.0f;
 	Material material;
 	public float damage = 10;
-
+	//sound for laser fire
+	public AudioClip laserSound;
 
 
 	// Use this for initialization
@@ -75,7 +78,7 @@ public class EnemyShipAI : MonoBehaviour {
 
 	void fireWeapon()
 	{
-		if (Time.time > fireRate) 
+		if (Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
 			GameObject newClone = (GameObject)Instantiate(projectile, this.transform.position,this.transform.rotation);
@@ -83,7 +86,7 @@ public class EnemyShipAI : MonoBehaviour {
 			newClone.renderer.material = material;
 			newClone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			Physics.IgnoreCollision (newClone.collider, transform.root.collider);
-
+			audio.PlayOneShot(laserSound, 5.0f);
 		}
 	}
 

@@ -11,8 +11,9 @@ public class WeaponHandlerScript : MonoBehaviour {
 	public float speed = 5.0f;
 	Material material;
 	public float damage = 10;
+	//sound for laser fire
 	public AudioClip laserSound;
-	//public AudioSource laserSound1;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -40,12 +41,8 @@ public class WeaponHandlerScript : MonoBehaviour {
 			clone.renderer.material = material;
 			clone.rigidbody.velocity = transform.TransformDirection(0,0,speed);
 			Physics.IgnoreCollision(clone.collider, transform.root.collider);
-			if(laserSound != null)
-			{
-				audio.PlayOneShot(laserSound, 1.0f);
-				//audio.Play();
-				//audio.
-			}
+			audio.PlayOneShot(laserSound, 1.0f);
+
 		}
 	}
 

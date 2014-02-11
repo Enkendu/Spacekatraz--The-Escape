@@ -9,6 +9,9 @@ public class LevelController : MonoBehaviour {
 	private float native_height = 1080;
 	private float native_width = 1920;
 
+	//pause game
+	bool pause;
+
 	//bool for starting the game.
 	public static bool startGame;
 	public static bool didDie;
@@ -16,6 +19,7 @@ public class LevelController : MonoBehaviour {
 	public static bool canFire;
 
 	void Start () {
+		pause = false;
 		canFire = false;
 		startGame = false;
 		didDie = false;
@@ -24,6 +28,18 @@ public class LevelController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(Input.GetKeyDown("p"))
+		{
+			print ("pushed P");
+			Time.timeScale = 0.0f;
+			if(pause = false)
+			{
+				//pause = !pause;
+				Time.timeScale = 0.0f;
+			}
+		}
+
 	
 	}
 

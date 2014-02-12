@@ -44,7 +44,7 @@ public class EnemyShipAI : MonoBehaviour {
 		if (gapDistance <= viewDistance) 
 		{
 			transform.LookAt(player.transform.position);
-			if(LevelController.canFire)
+			if(LevelController.canFire == true && LevelController.pause == false)
 			{
 				fireWeapon();
 			}

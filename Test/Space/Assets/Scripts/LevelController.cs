@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour {
 	private float native_width = 1920;
 
 	//pause game
-	bool pause;
+	public static bool pause;
 
 	//bool for starting the game.
 	public static bool startGame;
@@ -29,18 +29,24 @@ public class LevelController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		//pause and unpause game from pushing p
 		if(Input.GetKeyDown("p"))
 		{
-			print ("pushed P");
-			Time.timeScale = 0.0f;
-			if(pause = false)
+			//print ("p was pushed");
+			pause = !pause;
+			if(pause == false)
 			{
-				//pause = !pause;
+				//print("Game should not be paused");
+				Time.timeScale = 1.0f;
+			}
+			else
+			{
+				//print ("Game should be paused.");
 				Time.timeScale = 0.0f;
 			}
 		}
 
-	
 	}
 
 
@@ -92,5 +98,7 @@ public class LevelController : MonoBehaviour {
 				Application.LoadLevel("Test_WithMap");
 			}
 		}
+
+
 	}
 }

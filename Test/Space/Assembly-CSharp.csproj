@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\ExitDoor.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\Reactor.cs" />
+     <Compile Include="Assets\Scripts\ShipHitPoints.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\SpaceShipMovement.cs" />
      <Compile Include="Assets\Scripts\WinLevel.cs" />

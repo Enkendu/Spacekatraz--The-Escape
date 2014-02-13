@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Reactor.cs" />
      <Compile Include="Assets\Scripts\ShipHitPoints.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
+     <Compile Include="Assets\Scripts\SmoothFollowScript.cs" />
      <Compile Include="Assets\Scripts\SpaceShipMovement.cs" />
      <Compile Include="Assets\Scripts\WinLevel.cs" />
      <Compile Include="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" />

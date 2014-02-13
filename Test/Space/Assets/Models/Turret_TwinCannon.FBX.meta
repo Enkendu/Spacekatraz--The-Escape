@@ -1,40 +1,30 @@
 fileFormatVersion: 2
-guid: bcccbbd49252dbf468bdeb74548a72b4
+guid: 96185f11bbe3d3c4ea69a65232013940
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Ball
-    100002: Barrel_Left
-    100004: Barrel_Right
-    100006: Base
-    100008: MuzzlePos_Left
-    100010: MuzzlePos_Right
-    100012: //RootNode
-    400000: Ball
-    400002: Barrel_Left
-    400004: Barrel_Right
-    400006: Base
-    400008: MuzzlePos_Left
-    400010: MuzzlePos_Right
-    400012: //RootNode
-    2300000: Ball
-    2300002: Barrel_Left
-    2300004: Barrel_Right
-    2300006: Base
-    2300008: MuzzlePos_Left
-    2300010: MuzzlePos_Right
-    3300000: Ball
-    3300002: Barrel_Left
-    3300004: Barrel_Right
-    3300006: Base
-    3300008: MuzzlePos_Left
-    3300010: MuzzlePos_Right
-    4300000: Base
-    4300002: MuzzlePos_Left
-    4300004: MuzzlePos_Right
-    4300006: Barrel_Right
-    4300008: Barrel_Left
-    4300010: Ball
+    100000: Barrel_Left
+    100002: Barrel_Right
+    100004: Base
+    100006: Sphere01
+    100008: //RootNode
+    400000: Barrel_Left
+    400002: Barrel_Right
+    400004: Base
+    400006: Sphere01
+    400008: //RootNode
+    2300000: Barrel_Left
+    2300002: Barrel_Right
+    2300004: Base
+    2300006: Sphere01
+    3300000: Barrel_Left
+    3300002: Barrel_Right
+    3300004: Base
+    3300006: Sphere01
+    4300000: Barrel_Right
+    4300002: Barrel_Left
+    4300004: Sphere01
+    4300006: Base
     9500000: //RootNode
   materials:
     importMaterials: 1

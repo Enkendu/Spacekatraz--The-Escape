@@ -60,6 +60,7 @@
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
      <Compile Include="Assets\PorglezompPyroclastics\ExplosionMat.cs" />
+     <Compile Include="Assets\Scripts\CamSwitch.cs" />
      <Compile Include="Assets\Scripts\EnemyShipAI.cs" />
      <Compile Include="Assets\Scripts\ExitDoor.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />

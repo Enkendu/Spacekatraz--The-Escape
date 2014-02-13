@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamSwitch.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamSwitch.cs">
     <Files>
-      <File FileName="Assets\Scripts\CamSwitch.js" Line="10" Column="15" />
+      <File FileName="Assets\Scripts\CamSwitch.cs" Line="22" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

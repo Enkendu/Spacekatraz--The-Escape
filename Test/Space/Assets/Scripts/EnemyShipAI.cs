@@ -38,41 +38,24 @@ public class EnemyShipAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		gapDistance = Vector3.Distance (this.transform.position, player.transform.position);
-
-
-		if (gapDistance <= viewDistance) 
+		if(player != null)
 		{
-			transform.LookAt(player.transform.position);
-			if(LevelController.canFire == true && LevelController.pause == false)
+			gapDistance = Vector3.Distance (this.transform.position, player.transform.position);
+		
+
+			if (gapDistance <= viewDistance) 
 			{
-				fireWeapon();
+				transform.LookAt(player.transform.position);
+				if(LevelController.canFire == true && LevelController.pause == false)
+				{
+					fireWeapon();
+				}
+
+				if(gapDistance > stopDistance)
+				{
+					rigidbody.AddRelativeForce(Vector3.forward*25);
+				}
 			}
-
-			if(gapDistance > stopDistance)
-			{
-				//Truespeed controls
-				
-				if (trueSpeed < 10 && trueSpeed > -3)
-				{
-					trueSpeed += power;
-				}
-				if (trueSpeed > 10)
-				{
-					trueSpeed = 9.99f;	
-				}
-				if (trueSpeed < -3)
-				{
-					trueSpeed = -2.99f;	
-				}
-				if (Input.GetKey("backspace"))
-				{
-					trueSpeed = 0;
-				}
-
-				rigidbody.AddRelativeForce(Vector3.forward*25);
-			}
-
 		}
 	}
 

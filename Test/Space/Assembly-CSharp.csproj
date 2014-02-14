@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\CamSwitch.cs" />
      <Compile Include="Assets\Scripts\EnemyShipAI.cs" />
      <Compile Include="Assets\Scripts\ExitDoor.cs" />
+     <Compile Include="Assets\Scripts\ExplosionSound.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\Reactor.cs" />
      <Compile Include="Assets\Scripts\ShipHitPoints.cs" />

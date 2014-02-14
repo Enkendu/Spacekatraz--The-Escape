@@ -10,9 +10,10 @@ public class ShipHitPoints : MonoBehaviour {
 
 	public GameObject mainCamera;
 	public GameObject explosion;
+	public GameObject shipExplosionSound;
 
 	public float hitPoints = 100;
-	public AudioClip shipExplosionSound;
+
 
 	void Start () {
 	
@@ -29,7 +30,7 @@ public class ShipHitPoints : MonoBehaviour {
 		if(collision.transform.tag == "Laser")
 		{
 			hitPoints -= 5;
-			print (hitPoints);
+			//print (hitPoints);
 		}
 
 		if (hitPoints <= 0.0f)
@@ -44,8 +45,6 @@ public class ShipHitPoints : MonoBehaviour {
 				LevelController.didDie = true;
 			}
 
-			//audio.PlayOneShot(shipExplosionSound, 5.0f);
-			//audio.Play();
 			SpawnExplosions();
 			Destroy(gameObject);
 		}
@@ -54,13 +53,7 @@ public class ShipHitPoints : MonoBehaviour {
 	void SpawnExplosions()
 	{
 		//add instantiate explosion here.
-		GameObject clone = (GameObject)Instantiate(explosion , transform.position, transform.rotation);
-		//clone.AddComponent("AudioSource") as AudioSource;
-
-//		clone.AddComponent<AudioSource>();
-		//		clone.clip = Resources.Load(shipExplosionSound) as AudioClip;
-//		audioSource.Play();
-
-		//clone.transform.audio.Play ();
+		Instantiate(explosion , transform.position, transform.rotation);
+		GameObject clone = (GameObject)Instantiate(shipExplosionSound , transform.position, transform.rotation);
 	}
 }

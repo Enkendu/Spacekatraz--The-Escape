@@ -119,7 +119,7 @@ public class LevelController : MonoBehaviour {
 		if(Time.time > countDownToPauseOnDeath)
 		{
 			//bring up the player lose window UI menu
-			print ("You Died! Game Paused.");
+			//print ("You Died! Game Paused.");
 			playerLoose = true;
 		}
 	}

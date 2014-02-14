@@ -1,8 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamSwitch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Reactor.cs">
     <Files>
-      <File FileName="Assets\Scripts\CamSwitch.cs" Line="22" Column="4" />
+      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="56" Column="3" />
+      <File FileName="Assets\Scripts\CamSwitch.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelController.cs" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\Projectiles\LaserProjectileScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ExplosionSound.cs" Line="19" Column="6" />
+      <File FileName="Assets\Scripts\Reactor.cs" Line="33" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

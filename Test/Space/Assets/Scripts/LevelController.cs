@@ -9,22 +9,58 @@ public class LevelController : MonoBehaviour {
 	private float native_height = 1080;
 	private float native_width = 1920;
 
+	//pause game
+	public static bool pause;
+
 	//bool for starting the game.
 	public static bool startGame;
 	public static bool didDie;
 	public static bool didWin;
 	public static bool canFire;
+	private bool playerLoose;
+
+	private float countDownToPauseOnDeath = 6.0f;
 
 	void Start () {
+		pause = false;
 		canFire = false;
 		startGame = false;
 		didDie = false;
 		didWin = false;
+		playerLoose = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		//pause and unpause game from pushing p
+		if(Input.GetKeyDown("p"))
+		{
+			//print ("p was pushed");
+			pause = !pause;
+			if(pause == false)
+			{
+				//print("Game should not be paused");
+				Time.timeScale = 1.0f;
+			}
+			else
+			{
+				//print ("Game should be paused.");
+				Time.timeScale = 0.0f;
+			}
+		}
+
+		if(didDie == true)
+		{
+			//print ("did die");
+			timeDownTillPause();
+		}
+		else
+		{
+			//print ("not dead");
+			countDownToPauseOnDeath = Time.time + 5.0f;
+		}
+		//print (Time.time);
 	}
 
 
@@ -52,7 +88,7 @@ public class LevelController : MonoBehaviour {
 		}
 
 		//death/lose
-		if(didDie == true)
+		if(playerLoose == true)
 		{
 			canFire = false;
 			Time.timeScale = 0.0f;
@@ -67,14 +103,24 @@ public class LevelController : MonoBehaviour {
 		//win
 		if(didWin == true)
 		{
-			canFire = false;
-			Time.timeScale = 0.0f;
+			timeDownTillPause();
 			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
 			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
 			{
 	
 				Application.LoadLevel("Test_WithMap");
 			}
+		}
+	}
+
+	void timeDownTillPause()
+	{
+		//print (countDownToPauseOnDeath);
+		if(Time.time > countDownToPauseOnDeath)
+		{
+			//bring up the player lose window UI menu
+			//print ("You Died! Game Paused.");
+			playerLoose = true;
 		}
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//[RequireComponent(typeof("Laser"))]
+[RequireComponent (typeof (AudioClip))]
 public class WeaponHandlerScript : MonoBehaviour {
 
 	public GameObject projectile;
@@ -9,6 +11,9 @@ public class WeaponHandlerScript : MonoBehaviour {
 	public float speed = 5.0f;
 	Material material;
 	public float damage = 10;
+	//sound for laser fire
+	public AudioClip laserSound;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -19,7 +24,7 @@ public class WeaponHandlerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(LevelController.canFire == true)
+		if(LevelController.canFire == true && LevelController.pause == false)
 		{
 			fireWeapon();
 		}
@@ -36,7 +41,8 @@ public class WeaponHandlerScript : MonoBehaviour {
 			clone.renderer.material = material;
 			clone.rigidbody.velocity = transform.TransformDirection(0,0,speed);
 			Physics.IgnoreCollision(clone.collider, transform.root.collider);
-			
+			audio.PlayOneShot(laserSound, 1.0f);
+
 		}
 	}
 

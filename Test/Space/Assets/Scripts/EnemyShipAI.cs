@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent (typeof (AudioClip))]
 public class EnemyShipAI : MonoBehaviour {
 	// Variables used to target the player
 	private GameObject player;
@@ -20,14 +22,14 @@ public class EnemyShipAI : MonoBehaviour {
 	public float speed = 5.0f;
 	Material material;
 	public float damage = 10;
-	public bool isFiring = false;
-
+	//sound for laser fire
+	public AudioClip laserSound;
 
 
 	// Use this for initialization
 	void Start () 
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("playerShip");
 		nextFire = Time.time;
 		material = new Material(Shader.Find("Diffuse"));
 	}
@@ -36,60 +38,38 @@ public class EnemyShipAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		gapDistance = Vector3.Distance (this.transform.position, player.transform.position);
-
-
-		if (gapDistance <= viewDistance) 
+		if(player != null)
 		{
-			transform.LookAt(player.transform.position);
-			if(LevelController.canFire)
-			{
-				fireWeapon();
-				isFiring = true;
-			}
-			else
-			{
-				isFiring = false;
-			}
+			gapDistance = Vector3.Distance (this.transform.position, player.transform.position);
+		
 
-			if(gapDistance > stopDistance)
+			if (gapDistance <= viewDistance) 
 			{
-				//Truespeed controls
-				
-				if (trueSpeed < 10 && trueSpeed > -3)
+				transform.LookAt(player.transform.position);
+				if(LevelController.canFire == true && LevelController.pause == false)
 				{
-					trueSpeed += power;
-				}
-				if (trueSpeed > 10)
-				{
-					trueSpeed = 9.99f;	
-				}
-				if (trueSpeed < -3)
-				{
-					trueSpeed = -2.99f;	
-				}
-				if (Input.GetKey("backspace"))
-				{
-					trueSpeed = 0;
+					fireWeapon();
 				}
 
-				rigidbody.AddRelativeForce(Vector3.forward*25);
+				if(gapDistance > stopDistance)
+				{
+					rigidbody.AddRelativeForce(Vector3.forward*25);
+				}
 			}
-
 		}
 	}
 
 	void fireWeapon()
 	{
-		if (Time.time > fireRate) 
+		if (Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
-			GameObject clone = (GameObject)Instantiate (projectile, transform.position, transform.rotation);
-			//clone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			GameObject newClone = (GameObject)Instantiate(projectile, this.transform.position,this.transform.rotation);
 			material.color = new Color (1, 0, 0, 0);
-			clone.renderer.material = material;
-			clone.rigidbody.velocity = transform.TransformDirection (0, 0, speed);
-			Physics.IgnoreCollision (clone.collider, transform.root.collider);
+			newClone.renderer.material = material;
+			newClone.rigidbody.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			Physics.IgnoreCollision (newClone.collider, transform.root.collider);
+			audio.PlayOneShot(laserSound, 5.0f);
 		}
 	}
 

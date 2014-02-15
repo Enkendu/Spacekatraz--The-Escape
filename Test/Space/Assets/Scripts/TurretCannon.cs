@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class TurretCannon : MonoBehaviour {
-	private GameObject myProjectile, muzzleEffect;
+	public GameObject myProjectile, muzzleEffect;
 	private float reloadTime = 1.0f;
 	private float turnSpeed = 5.0f;
 	private float firePauseTime = .25f;
 	private float errorAmount = .001f;
-	private Transform myTarget, turretBall;
-	private Transform[] muzzlePositions;
+	public Transform myTarget, turretBall;
+	public Transform[] muzzlePositions;
+	public float projectileSpeed = 70.0f;
 	
 	private float nextFireTime, nextMoveTime, aimError;
 	private Quaternion desiredRotation;
@@ -34,7 +35,7 @@ public class TurretCannon : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.tag=="Enemy")
+		if(other.gameObject.tag=="playerShip")
 		{
 			nextFireTime = Time.time + (reloadTime*.5f);
 			myTarget = other.gameObject.transform;
@@ -61,14 +62,16 @@ public class TurretCannon : MonoBehaviour {
 	
 	void FireProjectile()
 	{
-		audio.Play();
+//		audio.Play();
 		nextFireTime = Time.time+reloadTime;
 		nextMoveTime = Time.time+firePauseTime;
 		CalculateAimError();
 		foreach(Transform theMuzzlePos in muzzlePositions)
 		{
-			Instantiate(myProjectile, theMuzzlePos.position, theMuzzlePos.rotation);
-			Instantiate(muzzleEffect, theMuzzlePos.position, theMuzzlePos.rotation);
+			GameObject projectile = (GameObject)Instantiate(myProjectile, theMuzzlePos.position, theMuzzlePos.rotation);
+			projectile.rigidbody.velocity = transform.TransformDirection(0,0,projectileSpeed);
+			Physics.IgnoreCollision(projectile.collider, transform.root.collider);
+//			Instantiate(muzzleEffect, theMuzzlePos.position, theMuzzlePos.rotation);
 		}
 	}
 }

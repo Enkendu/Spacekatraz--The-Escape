@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipHitPoints.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelController.cs" Line="100" Column="45" />
       <File FileName="Assets\Scripts\TurretCannon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TurretProjectile.cs" Line="1" Column="1" />
       <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="65" Column="1" />
+      <File FileName="Assets\Scripts\PlayerSpawnPoint.cs" Line="17" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -32,8 +32,7 @@ public class TurretBarrelFire : MonoBehaviour {
 		if(player != null)
 		{
 			gapDistance = Vector3.Distance (this.transform.position, player.transform.position);
-			
-			fireWeapon();
+
 			if (gapDistance <= viewDistance) 
 			{
 				if(LevelController.canFire == true && LevelController.pause == false)

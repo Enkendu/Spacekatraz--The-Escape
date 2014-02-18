@@ -1,0 +1,11 @@
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\obj\Debug\Assembly-CSharp.dll
+C:\Users\Nathan\Documents\GitHub\Spacekatraz--The-Escape\Test\Space\obj\Debug\Assembly-CSharp.pdb

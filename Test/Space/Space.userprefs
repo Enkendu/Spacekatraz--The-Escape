@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TurretBarrelFire.cs">
     <Files>
@@ -8,6 +9,17 @@
       <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipHitPoints.cs">
+    <Files>
+      <File FileName="Assets\Scripts\LevelController.cs" Line="100" Column="45" />
+      <File FileName="Assets\Scripts\TurretCannon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TurretProjectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="65" Column="1" />
+      <File FileName="Assets\Scripts\PlayerSpawnPoint.cs" Line="17" Column="3" />
+>>>>>>> 1a766ae408011ed1392e3d34706ec3f3ca205916
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

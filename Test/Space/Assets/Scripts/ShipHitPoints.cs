@@ -9,6 +9,7 @@ public class ShipHitPoints : MonoBehaviour {
 	// Use this for initialization
 
 	public GameObject mainCamera;
+	public GameObject firstPersonCamera;
 	public GameObject explosion;
 	public GameObject shipExplosionSound;
 
@@ -38,6 +39,10 @@ public class ShipHitPoints : MonoBehaviour {
 			if(mainCamera != null)
 			{
 				mainCamera.transform.parent = null;
+			}
+			if(firstPersonCamera != null)
+			{
+				firstPersonCamera.transform.parent = null;
 			}
 			if(transform.tag == "playerShip")
 			{

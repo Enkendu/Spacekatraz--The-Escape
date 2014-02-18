@@ -50,12 +50,12 @@ public class TurretBarrelFire : MonoBehaviour {
 		if (Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
-			GameObject newClone = (GameObject)Instantiate(projectile,this.transform.position,this.transform.rotation);
-			//GameObject newClone = (GameObject)Instantiate(projectile, transform.position,transform.root.rotation);
+			GameObject newClone = (GameObject)Instantiate(projectile,this.transform.position, transform.rotation);
+			newClone.transform.Rotate(90,0,0);
 			newClone.transform.localScale = newClone.transform.localScale*4;
 			material.color = new Color (0, 1, 0, 0);
 			newClone.renderer.material = material;
-			newClone.rigidbody.velocity = transform.TransformDirection(transform.root.forward*speed);
+			newClone.rigidbody.velocity = transform.TransformDirection(transform.forward*-speed);
 			Physics.IgnoreCollision (newClone.collider, transform.collider);
 			audio.PlayOneShot(laserSound, 5.0f);
 		}

@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TurretCannon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TurretBarrelFire.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelController.cs" Line="76" Column="4" />
-      <File FileName="Assets\Scripts\TurretCannon.cs" Line="72" Column="84" />
-      <File FileName="Assets\Scripts\TurretProjectile.cs" Line="22" Column="1" />
-      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="42" Column="4" />
+      <File FileName="Assets\Scripts\TurretBarrelFire.cs" Line="58" Column="78" />
+      <File FileName="Assets\Scripts\TurretCannonNew.cs" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="75" Column="2" />
+      <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="42" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

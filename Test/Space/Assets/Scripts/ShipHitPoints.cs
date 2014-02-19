@@ -14,10 +14,10 @@ public class ShipHitPoints : MonoBehaviour {
 	public GameObject shipExplosionSound;
 
 	public float hitPoints = 100;
-
+	private bool canDestroy;
 
 	void Start () {
-	
+		canDestroy = true;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +34,7 @@ public class ShipHitPoints : MonoBehaviour {
 			//print (hitPoints);
 		}
 
-		if (hitPoints <= 0.0f)
+		if (hitPoints <= 0.0f && canDestroy == true)
 		{
 			if(mainCamera != null)
 			{
@@ -50,15 +50,31 @@ public class ShipHitPoints : MonoBehaviour {
 				LevelController.didDie = true;
 			}
 
-			SpawnExplosions();
-			Destroy(gameObject);
+			if(canDestroy == true)
+			{
+				SpawnExplosions();
+			}
+			canDestroy = false;
+			//Destroy(gameObject, 1.0f);
+			//Time.timeScale = 0.0f;
 		}
+
+//		if(canDestroy = false)
+//		{
+//			//canDestroy = true;
+//			SpawnExplosions();
+//			Destroy(gameObject, 1.0f);
+//		}
 	}
 
 	void SpawnExplosions()
 	{
 		//add instantiate explosion here.
+		//if(gameObject != null)
+		//{
 		Instantiate(explosion , transform.position, transform.rotation);
 		GameObject clone = (GameObject)Instantiate(shipExplosionSound , transform.position, transform.rotation);
+		Destroy(gameObject);
+		//}
 	}
 }

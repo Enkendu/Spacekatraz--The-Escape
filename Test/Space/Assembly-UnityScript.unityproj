@@ -52,6 +52,7 @@
   <ItemGroup>
      <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\Detonator Spray Helper.js" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.js" />
+     <Compile Include="Assets\Menu\Menu.js" />
      <Compile Include="Assets\SF-Pack Mobile\Source\Scripts\Fx\MobileBloom.js" />
      <Compile Include="Assets\SF-Pack Mobile\Source\Scripts\ShowFps.js" />
      <Compile Include="Assets\SF-Pack Mobile\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />

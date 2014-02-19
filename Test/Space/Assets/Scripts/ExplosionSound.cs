@@ -19,7 +19,7 @@ public class ExplosionSound : MonoBehaviour {
 			//audio.Play();
 //			if(Time.time > blowUp)
 //			{
-				Destroy(gameObject);
+				Destroy(gameObject, 1.0f);
 //			}
 		}
 	}

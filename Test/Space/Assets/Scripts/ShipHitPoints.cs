@@ -69,12 +69,9 @@ public class ShipHitPoints : MonoBehaviour {
 
 	void SpawnExplosions()
 	{
-		//add instantiate explosion here.
-		//if(gameObject != null)
-		//{
 		Instantiate(explosion , transform.position, transform.rotation);
 		GameObject clone = (GameObject)Instantiate(shipExplosionSound , transform.position, transform.rotation);
+
 		Destroy(gameObject);
-		//}
 	}
 }

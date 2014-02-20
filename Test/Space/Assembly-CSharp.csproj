@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\PlayerSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Reactor.cs" />
+     <Compile Include="Assets\Scripts\ReactorForceFields.cs" />
      <Compile Include="Assets\Scripts\ShipHitPoints.cs" />
      <Compile Include="Assets\Scripts\ShipMovement.cs" />
      <Compile Include="Assets\Scripts\SmoothFollowScript.cs" />

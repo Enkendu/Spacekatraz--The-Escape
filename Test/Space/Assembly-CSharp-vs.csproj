@@ -63,6 +63,10 @@
      <Compile Include="Assets\Menu\MenuGameStart.cs" />
      <Compile Include="Assets\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Scripts\CamSwitch.cs" />
+     <Compile Include="Assets\Scripts\DialogScripts\DialogFour.cs" />
+     <Compile Include="Assets\Scripts\DialogScripts\DialogOne.cs" />
+     <Compile Include="Assets\Scripts\DialogScripts\DialogThree.cs" />
+     <Compile Include="Assets\Scripts\DialogScripts\DialogTwo.cs" />
      <Compile Include="Assets\Scripts\EnemyShipAI.cs" />
      <Compile Include="Assets\Scripts\ExitDoor.cs" />
      <Compile Include="Assets\Scripts\ExplosionSound.cs" />

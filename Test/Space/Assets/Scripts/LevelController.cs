@@ -15,7 +15,10 @@ public class LevelController : MonoBehaviour {
 	public GUISkin redHealthBarSkin;
 	public GUISkin greenHealthBarSkin;
 	float healthPercent;
-
+	public AudioClip backGroundMusic;
+	public AudioClip deathMusic;
+	public AudioClip victoryMusic;
+	public AudioClip mainBadGuy;
 	//pause game
 	public static bool pause;
 
@@ -32,6 +35,7 @@ public class LevelController : MonoBehaviour {
 
 	private float countDownToPauseOnDeath = 6.0f;
 
+
 	void Start () {
 		pause = false;
 		canFire = false;
@@ -39,7 +43,8 @@ public class LevelController : MonoBehaviour {
 		didDie = false;
 		didWin = false;
 		playerLoose = false;
-
+		audio.clip = backGroundMusic;
+		audio.Play();
 	}
 	
 	// Update is called once per frame
@@ -71,6 +76,8 @@ public class LevelController : MonoBehaviour {
 		if(didDie == true)
 		{
 			//print ("did die");
+			audio.clip = deathMusic;
+			audio.Play();
 			timeDownTillPause();
 		}
 		else
@@ -122,10 +129,10 @@ public class LevelController : MonoBehaviour {
 			canFire = false;
 			Time.timeScale = 0.0f;
 			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
-			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			if(GUI.Button (new Rect(375, 400, 150, 100), "Main Menu"))
 			{
 
-				Application.LoadLevel("Test_WithMap");
+				Application.LoadLevel("MainMenu");
 			}
 		}
 
@@ -134,10 +141,10 @@ public class LevelController : MonoBehaviour {
 		{
 			timeDownTillPause();
 			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
-			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			if(GUI.Button (new Rect(375, 400, 150, 100), "Main Menu"))
 			{
 	
-				Application.LoadLevel("Test_WithMap");
+				Application.LoadLevel("MainMenu");
 			}
 		}
 	}

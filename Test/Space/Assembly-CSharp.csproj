@@ -59,6 +59,8 @@
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Menu\MenuGameExit.cs" />
+     <Compile Include="Assets\Menu\MenuGameStart.cs" />
      <Compile Include="Assets\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Scripts\CamSwitch.cs" />
      <Compile Include="Assets\Scripts\EnemyShipAI.cs" />

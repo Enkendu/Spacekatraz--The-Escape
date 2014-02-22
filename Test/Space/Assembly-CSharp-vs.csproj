@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\DialogScripts\DialogTwo.cs" />
      <Compile Include="Assets\Scripts\EnemyShipAI.cs" />
      <Compile Include="Assets\Scripts\ExitDoor.cs" />
+     <Compile Include="Assets\Scripts\ExitForceField.cs" />
      <Compile Include="Assets\Scripts\ExplosionSound.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\PlayerSpawnPoint.cs" />

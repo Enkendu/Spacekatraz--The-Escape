@@ -1,24 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TurretBarrelFire.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DialogScripts\DialogFour.cs">
     <Files>
-<<<<<<< HEAD
+      <File FileName="Assets\Scripts\TurretCannonNew.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ReactorForceFields.cs" Line="25" Column="1" />
+      <File FileName="Assets\Scripts\TurretCannon.cs" Line="22" Column="18" />
+      <File FileName="Assets\Scripts\ExitForceField.cs" Line="21" Column="4" />
+      <File FileName="Assets\Scripts\Reactor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ExitDoor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DialogScripts\DialogFour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelController.cs" Line="195" Column="44" />
-      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="31" Column="6" />
-      <File FileName="Assets\Scripts\Reactor.cs" Line="45" Column="27" />
-      <File FileName="Assets\Scripts\DialogScripts\DialogOne.cs" Line="1" Column="1" />
-      <File FileName="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" Line="1" Column="1" />
-      <File FileName="Assets\WeaponSystems\WeaponHandlerScript.cs" Line="44" Column="4" />
-      <File FileName="Assets\Scripts\DialogScripts\DialogTwo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DialogScripts\DialogThree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurretBarrelFire.cs" Line="55" Column="38" />
-=======
-      <File FileName="Temp\Compiled-Normal-Diffuse.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelController.cs" Line="28" Column="17" />
-      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="1" Column="1" />
->>>>>>> 48a6274e8bda8430c9de058561d407e4c81c3f83
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

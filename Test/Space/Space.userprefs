@@ -1,14 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DialogScripts\DialogFour.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BossFiring.cs">
     <Files>
-      <File FileName="Assets\Scripts\TurretCannonNew.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ReactorForceFields.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\TurretCannon.cs" Line="22" Column="18" />
-      <File FileName="Assets\Scripts\ExitForceField.cs" Line="21" Column="4" />
-      <File FileName="Assets\Scripts\Reactor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ExitDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DialogScripts\DialogFour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BossShipAI.cs" Line="8" Column="31" />
+      <File FileName="Assets\Scripts\BossFiring.cs" Line="38" Column="5" />
+      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="47" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

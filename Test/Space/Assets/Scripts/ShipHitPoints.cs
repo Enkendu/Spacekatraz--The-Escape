@@ -3,7 +3,7 @@ using System.Collections;
 
 
 //[RequireComponent (typeof (AudioClip))]
-[RequireComponent(typeof(AudioSource))]
+
 public class ShipHitPoints : MonoBehaviour {
 
 	// Use this for initialization
@@ -70,7 +70,7 @@ public class ShipHitPoints : MonoBehaviour {
 	void SpawnExplosions()
 	{
 		Instantiate(explosion , transform.position, transform.rotation);
-		GameObject clone = (GameObject)Instantiate(shipExplosionSound , transform.position, transform.rotation);
+		Instantiate(shipExplosionSound , transform.position, transform.rotation);
 
 		Destroy(gameObject);
 	}

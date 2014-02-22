@@ -12,4 +12,13 @@ public class DialogFour : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.transform.tag == "playerShip")
+		{
+			LevelController.dialogFour = true;
+		}
+	}
 }

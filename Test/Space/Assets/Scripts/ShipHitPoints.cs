@@ -12,6 +12,7 @@ public class ShipHitPoints : MonoBehaviour {
 	public GameObject firstPersonCamera;
 	public GameObject explosion;
 	public GameObject shipExplosionSound;
+	public AudioClip shipHit;
 
 	public float hitPoints = 100;
 	private bool canDestroy;
@@ -31,6 +32,8 @@ public class ShipHitPoints : MonoBehaviour {
 		if(collision.transform.tag == "Laser")
 		{
 			hitPoints -= 5;
+			audio.clip = shipHit;
+			audio.Play ();
 			//print (hitPoints);
 		}
 

@@ -189,6 +189,11 @@ public class LevelController : MonoBehaviour {
 		//win
 		if(didWin == true)
 		{
+			audio.clip = victoryMusic;
+			if(audio.isPlaying == false)
+			{
+				audio.Play();
+			}
 			GUI.skin = winSkin;
 			timeDownTillPause();
 			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");

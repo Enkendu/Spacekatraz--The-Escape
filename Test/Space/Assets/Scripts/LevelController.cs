@@ -139,6 +139,7 @@ public class LevelController : MonoBehaviour {
 			menuUp = !menuUp;
 			if(menuUp == false)
 			{
+				Screen.lockCursor = true;
 				Screen.showCursor = false;
 				Time.timeScale = 1.0f;
 			}
@@ -169,6 +170,7 @@ public class LevelController : MonoBehaviour {
 		if(menuUp == true)
 		{
 			Time.timeScale = 0.0f;
+			Screen.lockCursor = false;
 			Screen.showCursor = true;
 			GUI.Box (new Rect(830, 390, 260, 350), "Game Menu");
 			if(GUI.Button(new Rect(885, 490, 150, 100), "Main Menu"))
@@ -204,6 +206,8 @@ public class LevelController : MonoBehaviour {
 		{
 			GUI.skin = loseSkin;
 			canFire = false;
+			Screen.lockCursor = false;
+			Screen.showCursor = true;
 			Time.timeScale = 0.0f;
 			GUI.Box(new Rect(0, 0, 750, 305.5f), "You Lose! Try again");
 			if(GUI.Button (new Rect(457, 50, 125, 75), "Main Menu"))
@@ -223,6 +227,8 @@ public class LevelController : MonoBehaviour {
 			}
 			GUI.skin = winSkin;
 			timeDownTillPause();
+			Screen.lockCursor = false;
+			Screen.showCursor = true;
 			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
 			if(GUI.Button (new Rect(457, 50, 125, 75), "Main Menu"))
 			{

@@ -18,7 +18,7 @@ public class SpaceShipMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(LevelController.startGame == true)
+		if(LevelController.startGame == true || Screen.lockCursor == true)
 		{
 			yRotation += Input.GetAxis ("Mouse X");
 			xRotation += Input.GetAxis ("Mouse Y");

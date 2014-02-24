@@ -1,27 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelController.cs">
     <Files>
-      <File FileName="Assets\Scripts\WinLevel.cs" Line="4" Column="40" />
-      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="15" Column="27" />
-      <File FileName="Assets\Scripts\BossShipAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BossFiring.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyShipAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ExplosionSound.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelController.cs" Line="111" Column="5" />
-      <File FileName="Assets\Scripts\CamSwitch.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ExitDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ExitForceField.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerSpawnPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Reactor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ReactorForceFields.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ShipMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WinLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurretProjectile.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurretCannonNew.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurretCannon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurretBarrelFire.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpaceShipMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShipHitPoints.cs" Line="61" Column="23" />
+      <File FileName="Assets\Scripts\LevelController.cs" Line="137" Column="37" />
+      <File FileName="Assets\Scripts\CamSwitch.cs" Line="15" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

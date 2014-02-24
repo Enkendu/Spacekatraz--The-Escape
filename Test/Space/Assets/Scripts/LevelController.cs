@@ -34,7 +34,7 @@ public class LevelController : MonoBehaviour {
 	private bool playerLoose;
 
 	private float countDownToPauseOnDeath = 6.0f;
-
+	private bool menuUp = false;
 
 	//dialog images and switches
 	public static bool dialogZero;
@@ -134,6 +134,16 @@ public class LevelController : MonoBehaviour {
 			dialogTimer = Time.time + dialogSetTime;
 		}
 
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			menuUp = !menuUp;
+			if(menuUp == false)
+			{
+				Screen.showCursor = false;
+				Time.timeScale = 1.0f;
+			}
+		}
+
 	}
 
 
@@ -155,6 +165,23 @@ public class LevelController : MonoBehaviour {
 		GUI.Box (new Rect(760, 1020, healthPercent, 33), " ");
 		GUI.skin = null;
 
+
+		if(menuUp == true)
+		{
+			Time.timeScale = 0.0f;
+			Screen.showCursor = true;
+			GUI.Box (new Rect(830, 390, 260, 350), "Game Menu");
+			if(GUI.Button(new Rect(885, 490, 150, 100), "Main Menu"))
+			{
+				Application.LoadLevel("MainMenu");
+			}
+			if(GUI.Button(new Rect(885, 610, 150, 100), "Quit"))
+			{
+				Application.Quit();
+			}
+
+		}
+		 
 		//start //Game is paused until player pushes start buttong
 		if(startGame == false)
 		{
@@ -254,4 +281,6 @@ public class LevelController : MonoBehaviour {
 			playerLoose = true;
 		}
 	}
+
+
 }

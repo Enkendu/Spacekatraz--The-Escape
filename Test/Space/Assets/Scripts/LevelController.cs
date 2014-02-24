@@ -15,7 +15,10 @@ public class LevelController : MonoBehaviour {
 	public GUISkin redHealthBarSkin;
 	public GUISkin greenHealthBarSkin;
 	float healthPercent;
-
+	public AudioClip backGroundMusic;
+	public AudioClip deathMusic;
+	public AudioClip victoryMusic;
+	public AudioClip mainBadGuy;
 	//pause game
 	public static bool pause;
 
@@ -31,15 +34,45 @@ public class LevelController : MonoBehaviour {
 	private bool playerLoose;
 
 	private float countDownToPauseOnDeath = 6.0f;
+	private bool menuUp = false;
+
+	//dialog images and switches
+	public static bool dialogZero;
+	public static bool dialogOne;
+	public static bool dialogTwo;
+	public static bool dialogThree;
+	public static bool dialogFour;
+	//dialog skins
+	public GUISkin dialogZeroSkin;
+	public GUISkin dialogOneSkin;
+	public GUISkin dialogTwoSkin;
+	public GUISkin dialogThreeSkin;
+	public GUISkin dialogFourSkin;
+	//startskin
+	public GUISkin startSkin;
+	public GUISkin loseSkin;
+	public GUISkin winSkin;
+	//dialog timer
+	float dialogTimer = 0.0f;
+	public float dialogSetTime = 9.0f;
+
+
 
 	void Start () {
+		//AI dialog scripts
+		dialogOne = false;
+		dialogTwo = false;
+		dialogThree = false;
+		dialogFour = false;
+
 		pause = false;
 		canFire = false;
 		startGame = false;
 		didDie = false;
 		didWin = false;
 		playerLoose = false;
-
+		audio.clip = backGroundMusic;
+		audio.Play();
 	}
 	
 	// Update is called once per frame
@@ -71,6 +104,11 @@ public class LevelController : MonoBehaviour {
 		if(didDie == true)
 		{
 			//print ("did die");
+			audio.clip = deathMusic;
+			if(audio.isPlaying == false)
+			{
+				audio.Play();
+			}
 			timeDownTillPause();
 		}
 		else
@@ -79,6 +117,33 @@ public class LevelController : MonoBehaviour {
 			countDownToPauseOnDeath = Time.time + 5.0f;
 		}
 		//print (Time.time);
+
+		if((dialogOne == true || dialogTwo == true || dialogThree == true || dialogFour == true || dialogZero == true))
+		{
+			if(Time.time > dialogTimer)
+			{
+				dialogZero = false;
+				dialogOne = false;
+				dialogTwo = false;
+				dialogThree = false;
+				dialogFour = false;
+			}
+		}
+		else
+		{
+			dialogTimer = Time.time + dialogSetTime;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			menuUp = !menuUp;
+			if(menuUp == false)
+			{
+				Screen.showCursor = false;
+				Time.timeScale = 1.0f;
+			}
+		}
+
 	}
 
 
@@ -100,14 +165,32 @@ public class LevelController : MonoBehaviour {
 		GUI.Box (new Rect(760, 1020, healthPercent, 33), " ");
 		GUI.skin = null;
 
+
+		if(menuUp == true)
+		{
+			Time.timeScale = 0.0f;
+			Screen.showCursor = true;
+			GUI.Box (new Rect(830, 390, 260, 350), "Game Menu");
+			if(GUI.Button(new Rect(885, 490, 150, 100), "Main Menu"))
+			{
+				Application.LoadLevel("MainMenu");
+			}
+			if(GUI.Button(new Rect(885, 610, 150, 100), "Quit"))
+			{
+				Application.Quit();
+			}
+
+		}
+		 
 		//start //Game is paused until player pushes start buttong
 		if(startGame == false)
 		{
+			GUI.skin = startSkin;
 			Time.timeScale = 0.0f;
-			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
-			if(GUI.Button (new Rect(375, 400, 150, 100), "Start game"))
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+			if(GUI.Button (new Rect(457, 50, 125, 75), "Push to start game"))
 			{
-
+				dialogZero = true;
 				startGame = true;
 				canFire = true;
 				Time.timeScale = 1.0f;
@@ -119,26 +202,72 @@ public class LevelController : MonoBehaviour {
 		//death/lose
 		if(playerLoose == true)
 		{
+			GUI.skin = loseSkin;
 			canFire = false;
 			Time.timeScale = 0.0f;
-			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
-			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			GUI.Box(new Rect(0, 0, 750, 305.5f), "You Lose! Try again");
+			if(GUI.Button (new Rect(457, 50, 125, 75), "Main Menu"))
 			{
 
-				Application.LoadLevel("Test_WithMap");
+				Application.LoadLevel("MainMenu");
 			}
 		}
 
 		//win
 		if(didWin == true)
 		{
+			audio.clip = victoryMusic;
+			if(audio.isPlaying == false)
+			{
+				audio.Play();
+			}
+			GUI.skin = winSkin;
 			timeDownTillPause();
-			GUI.Box(new Rect(300, 300, 300, 300), "You Broke out of Prison and are trying to escape etc etc");
-			if(GUI.Button (new Rect(375, 400, 150, 100), "Restart game"))
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+			if(GUI.Button (new Rect(457, 50, 125, 75), "Main Menu"))
 			{
 	
-				Application.LoadLevel("Test_WithMap");
+				Application.LoadLevel("MainMenu");
 			}
+		}
+		if(dialogZero == true)
+		{
+			GUI.skin = dialogZeroSkin;
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+		}
+
+		if(dialogOne == true)
+		{
+			//dialogTimer = Time.time + dialogSetTime;
+			GUI.skin = dialogOneSkin;
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+		}
+
+		if(dialogTwo == true)
+		{
+			//dialogTimer = Time.time + dialogSetTime;
+			GUI.skin = dialogTwoSkin;
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+		}
+
+		if(dialogThree == true)
+		{
+			//dialogTimer = Time.time + dialogSetTime;
+			GUI.skin = dialogThreeSkin;
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
+		}
+
+		if(dialogFour == true)
+		{
+			//dialogTimer = Time.time + dialogSetTime;
+			//audio.Stop ();
+			audio.clip = mainBadGuy;
+			if(!audio.isPlaying)
+			{
+				audio.Play();
+			}
+			GUI.skin = dialogFourSkin;
+			GUI.Box(new Rect(0, 0, 750, 305.5f), " ");
 		}
 	}
 
@@ -152,4 +281,6 @@ public class LevelController : MonoBehaviour {
 			playerLoose = true;
 		}
 	}
+
+
 }

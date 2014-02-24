@@ -50,13 +50,16 @@ public class TurretBarrelFire : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			GameObject newClone = (GameObject)Instantiate(projectile,this.transform.position, transform.rotation);
+			Physics.IgnoreCollision (newClone.collider, transform.collider);
+			Physics.IgnoreCollision (newClone.collider, transform.parent.collider);
 			newClone.transform.Rotate(90,0,0);
 			newClone.transform.localScale = newClone.transform.localScale*4;
 			material.color = new Color (0, 1, 0, 0);
 			newClone.renderer.material = material;
 			newClone.rigidbody.velocity = transform.TransformDirection(transform.forward*-speed);
-			Physics.IgnoreCollision (newClone.collider, transform.collider);
-			audio.PlayOneShot(laserSound, 5.0f);
+
+			audio.PlayOneShot(laserSound, 1.0f);
+
 		}
 	}
 }

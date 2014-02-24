@@ -3,7 +3,7 @@ using System.Collections;
 
 
 //[RequireComponent (typeof (AudioClip))]
-[RequireComponent(typeof(AudioSource))]
+
 public class ShipHitPoints : MonoBehaviour {
 
 	// Use this for initialization
@@ -12,6 +12,8 @@ public class ShipHitPoints : MonoBehaviour {
 	public GameObject firstPersonCamera;
 	public GameObject explosion;
 	public GameObject shipExplosionSound;
+	public AudioClip shipHit;
+	public AudioClip scream;
 
 	public float hitPoints = 100;
 	private bool canDestroy;
@@ -31,6 +33,8 @@ public class ShipHitPoints : MonoBehaviour {
 		if(collision.transform.tag == "Laser")
 		{
 			hitPoints -= 5;
+			audio.clip = shipHit;
+			audio.Play ();
 			//print (hitPoints);
 		}
 
@@ -55,26 +59,27 @@ public class ShipHitPoints : MonoBehaviour {
 				SpawnExplosions();
 			}
 			canDestroy = false;
-			//Destroy(gameObject, 1.0f);
-			//Time.timeScale = 0.0f;
 		}
 
-//		if(canDestroy = false)
-//		{
-//			//canDestroy = true;
-//			SpawnExplosions();
-//			Destroy(gameObject, 1.0f);
-//		}
+
 	}
 
 	void SpawnExplosions()
 	{
-		//add instantiate explosion here.
-		//if(gameObject != null)
-		//{
 		Instantiate(explosion , transform.position, transform.rotation);
-		GameObject clone = (GameObject)Instantiate(shipExplosionSound , transform.position, transform.rotation);
-		Destroy(gameObject);
-		//}
+		Instantiate(shipExplosionSound , transform.position, transform.rotation);
+
+		if(audio.isPlaying)
+		{
+			audio.Stop();
+		}
+
+		if(scream != null)
+		{
+			audio.clip = scream;
+			audio.Play();
+		}
+
+		Destroy(gameObject , 1.0f);
 	}
 }
